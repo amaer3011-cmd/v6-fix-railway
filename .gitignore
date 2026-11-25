@@ -1,0 +1,26 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Runtime databases and learned/user data
+*.db
+*.db-wal
+*.db-shm
+learned_*.json
+unmatched_questions.jsonl
+backups/
+
+# Python and local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Build and editor files
+.git/
+artifacts/
+.DS_Store
