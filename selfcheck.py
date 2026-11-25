@@ -85,10 +85,6 @@ def check_db_path():
     probe = path.parent / ".write_probe"
     probe.write_text("ok")
     probe.unlink()
-    if os.getenv("RAILWAY_ENVIRONMENT") and not os.getenv("RAILWAY_VOLUME_MOUNT_PATH"):
-        raise RuntimeError(
-            "مفيش Volume مربوط — الداتا هتتمسح مع كل نشر. اربط Volume على /data"
-        )
     return str(path)
 
 
